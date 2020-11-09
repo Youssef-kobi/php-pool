@@ -1,0 +1,94 @@
+
+body{
+    background-image:url(https://i2.wp.com/files.123freevectors.com/wp-content/original/131725-red-and-orange-triangle-geometric-background-illustration.jpg?w=800&q=95);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.Grid{
+    display: grid;
+    grid-template-columns: repeat(18, minmax(0,1fr ));
+    grid-auto-rows: 3vw;
+    gap: 2px;
+    width: 60vw;
+    margin: auto;
+    margin-top: 10%;
+}
+.item{
+    position: relative;
+    border-radius: 4px;
+}
+.empty {
+    grid-column-start: 2;
+    grid-column-end: 18;
+    text-align: center;
+
+    background-color: rgba(0, 0, 0, 0);
+}
+.empty1 {
+    grid-column-start: 3;
+    grid-column-end: 13;
+    background-color: rgba(0, 0, 0, 0);
+}
+.empty2 {
+    grid-column-start: 1;
+    grid-column-end: 19;
+    background-color: rgba(0, 0, 0, 0);
+}
+.empty3 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: rgba(0, 0, 0, 0);
+}
+.Grid h1{
+    text-align: center;
+    margin: 30% 0% 30% 0%;
+    font-size: 1vw;
+
+}
+.Grid p{
+    margin: 0px;
+    font-size: 0.7vw;
+}
+.left{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.right{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.inline{
+    display: inline;
+}
+.color1{
+    background-color: grey;
+}
+.color2{
+    background-color: yellow;
+}
+.color3{
+    background-color: yellowgreen;
+}
+.color4{
+    background-color: green;
+}
+.color5{
+    background-color: darkgreen;
+}
+.color6{
+    background-color: greenyellow;
+}
+.color7{
+    background-color: skyblue;
+}
+.color8{
+    background-color: rgba(63, 138, 224, 0.397);
+}
+.color9{
+    background-color: burlywood;
+}
+.color10{
+    background-color: rgb(255, 0, 234);
+}
