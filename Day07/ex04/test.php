@@ -14,11 +14,11 @@ class Sansa extends Stark {
 }
 
 $j = new Jaime();
-$c = new Cersei();
+$c = new Cersei(); 
 $t = new Tyrion();
 $s = new Sansa();
 
-$j->sleepWith($t);
+$j->sleepWith($t);// jaime vs tyron
 $j->sleepWith($s);
 $j->sleepWith($c);
 
