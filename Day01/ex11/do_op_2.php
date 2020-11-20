@@ -7,7 +7,6 @@ if($argc == 2)
     {
         $a = intval($string[0]);
         $b = intval($string[2]);
-        print_r($string);
         switch ($string[1]) 
             {
                 case '+':

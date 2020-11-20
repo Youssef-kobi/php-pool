@@ -1,2 +1,1 @@
-SELECT ROUND(AVG(nb_seats)) AS`average’`
-FROM cinema;
+SELECT ROUND(avg(nb_seats)) 'average' FROM cinema;

@@ -9,6 +9,4 @@ class Tyrion extends Lannister
         print("Let's do this".PHP_EOL);
     }
 }
-
-
 ?>

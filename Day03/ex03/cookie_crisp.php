@@ -7,7 +7,7 @@ switch ($_GET['action']) {
         echo !($_COOKIE) ? NULL : $_COOKIE[$_GET['name']]."\n";;
         break;
     case 'del':
-        setcookie($_GET['name'], "", time()-60);
+        setcookie($_GET['name'], "", time()-3600);
         break;
 }
 ?>

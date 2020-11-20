@@ -1,1 +1,1 @@
-CREATE DATABASE `db_yel-kobi`;
+CREATE DATABASE IF NOT EXISTS `db_yel-kobi`;

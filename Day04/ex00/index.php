@@ -1,17 +1,12 @@
 <?php
-session_start();
-if($_GET['submit'] === 'OK')
-{
-    $_SESSION['login'] = $_GET['login'];
-    $_SESSION['passwd'] = $_GET['passwd'];
-}
+    session_start();
 ?>
+
 <html><body>
-<form action="index.php" method="GET">
-    Username: <input type="text" name="login" value="<?php if($_SESSION['login']) {echo $_SESSION['login'];} ?>">
-    <br />
-    Password: <input type="password" name="passwd" value="<?php if($_SESSION['passwd']) {echo $_SESSION['passwd'];} ?>">
-    <input type="submit" name="submit" value="OK">
+<form method="get" action="index.php">
+Identifiant: <input type="text" name="login" value="<?php  $_GET['login'] ? $_SESSION["login"] = $_GET['login'] : NULL; echo $_SESSION["login"] ? $_SESSION['login'] : "";?>" />
+<br />
+Mot de passe: <input type="password" name="passwd" value="<?php  $_GET['passwd'] ? $_SESSION["passwd"] = $_GET['passwd'] : NULL; echo $_SESSION["passwd"] ? $_SESSION['passwd'] : "";?>" />
+<input type="submit" name="submit" value="OK" />
 </form>
 </body></html>
-htm

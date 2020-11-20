@@ -13,8 +13,6 @@ if($argc > 2)
         
         $array = array_merge($array ,$ass_array);
         unset($ass_array);
-        // print_r($string);
-        // die();
     }
     if(array_key_exists($argv[1],$array))
         printf($array[$argv[1]]."\n");
