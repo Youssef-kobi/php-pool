@@ -1,44 +1,61 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html>
 <head>
-    <title>Balloon</title>
+    <title>Ballon</title>
     <style>
-        #balloon
+        #ballon
         {
-            background-color: red;
-            height: 200px;
             width: 200px;
+            height: 200px;
             border-radius: 50%;
+            margin: auto;
+            margin-top: 20%;;
         }
-
     </style>
 </head>
 <body>
-    <div id="balloon" onclick="size()"; onmouseout="mouseout()";></div>
+    <div id="ballon" onclick="occurs_size()" onmouseleave="mouse_move()"></div>
+</body>
     <script>
-        var x=0;
-        var balloon = document.getElementById('balloon');
-        var colors = new Array('red','green','blue'); 
-        
-        function size() {
-            var size = balloon.offsetHeight;
-            size >= 420 ? size = 200 : size += 10;
-            x < 2 ? x++ : x = 0;
-            apply(colors , size);
+        var ballon = document.getElementById('ballon');
+        ballon.style.backgroundColor='red';
+        function occurs_size()
+        {
+            var h = ballon.offsetHeight + 10;
+            var w = ballon.offsetWidth + 10;
+            var w_s = ballon.style.width = w + 'px';
+            var h_s = ballon.style.height = h + 'px';
+            var color1 = ballon.style.backgroundColor;
+            if (color1 === 'red')
+                ballon.style.backgroundColor = 'green';
+            else if (color1 === 'green')
+                ballon.style.backgroundColor = 'blue';
+            else
+                ballon.style.backgroundColor='red';
+            if (w_s > 420 + 'px'|| h_s > 420 + 'px')
+            {
+                ballon.style.width = 200 + 'px';
+                ballon.style.height = 200 + 'px';
+            }
         }
-
-        function mouseout() {
-            var size = balloon.offsetHeight;
-            size <= 200 ? size = 200 : size -= 5;
-            x > 0 ? x-- : x = 2;
-            apply(colors , size);
-        }
-        function apply(colors ,size ) {
-
-            balloon.style.backgroundColor = colors[x];
-            balloon.style.height = size + "px";
-            balloon.style.width = size + "px";
+        function mouse_move()
+        {
+            var h = ballon.offsetHeight - 5;
+            var w = ballon.offsetWidth - 5;
+            var w_s = ballon.style.width = w + 'px';
+            var h_s = ballon.style.height = h + 'px';
+            var color1 = ballon.style.backgroundColor;
+            if (color1 === 'red')
+                ballon.style.backgroundColor = 'blue';
+            else if (color1 === 'blue')
+                ballon.style.backgroundColor = 'green';
+            else
+                ballon.style.backgroundColor='red';
+            if (w_s < 200 + 'px'|| h_s < 200 + 'px')
+            {
+                ballon.style.width = 200 + 'px';
+                ballon.style.height = 200 + 'px';
+            }
         }
     </script>
-</body>
 </html>
